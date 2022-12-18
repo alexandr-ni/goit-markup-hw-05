@@ -141,12 +141,16 @@ a {
 
 .site-nav {
   display: block;
+  text-align: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   width: 72px;
   padding: 32px 0;
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auth-nav {
@@ -160,6 +164,9 @@ a {
   letter-spacing: 0.02em;
   width: 161px;
   padding: 32px 0;
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auth-nav:hover,
@@ -179,6 +186,22 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
 
 .current {
   color: var(--color-blue);
+  position: relative;
+  transition-property: after;
+  transition-duration: 2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.current::after {
+  display: block;
+  background: var(--color-blue);
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+  content: "";
+  margin-top: auto;
+  position: absolute;
+  bottom: 0;
 }
 
 .section-pageone {
@@ -225,6 +248,9 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
   letter-spacing: 0.06em;
   padding: 10px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -260,9 +286,6 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
   margin-bottom: 30px;
 }
 
-.features-list {
-}
-
 .h-three-in-pageone {
   font-weight: 700;
   font-size: 14px;
@@ -293,6 +316,26 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
   line-height: 1.16;
   letter-spacing: 0.03em;
   margin: 0 0 50px;
+}
+
+.what-we-do-box {
+  background: rgba(47, 48, 58, 0.8);
+  position: relative;
+  bottom: 70px;
+}
+
+.what-we-do-sentence {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin: 0;
+  padding: 27px 0;
 }
 
 /* Наша команда */
@@ -355,6 +398,10 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
   width: 100%;
   height: 100%;
   fill: inherit;
+  transition-property: background;
+  transition-property: border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon:hover,
@@ -377,6 +424,9 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
   line-height: 1.62;
   letter-spacing: 0.03em;
   padding: 6px 22px;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter:hover,
@@ -397,11 +447,48 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
 .container-in-pagetwo {
   background: var(--color-white);
   flex-basis: 370px;
+  position: relative;
+}
+
+.box-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(101%);
+  transition: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-overlay {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--color-white);
+}
+
+.link-in-pagetwo:hover .menu-overlay {
+  transform: translateY(0);
 }
 
 .link-in-pagetwo {
   display: block;
   border: 1px solid #eeeeee;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-in-pagetwo:hover,
@@ -448,6 +535,9 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address:focus,
@@ -490,6 +580,9 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
   background: rgba(255, 255, 255, 0.1);
   fill: var(--color-white);
   border-radius: 50%;
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-link:hover,
@@ -506,6 +599,9 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
   background: var(--color-white);
   fill: var(--color-social-icon);
   border-radius: 50%;
+  transition-property: background, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-link-our-team:hover,
@@ -527,4 +623,54 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--color-white);
+}
+
+/* Modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 528px;
+  height: 100%;
+  max-height: 581px;
+  background-color: var(--color-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.close-button {
+  display: block;
+  position: absolute;
+  background-color: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  right: 8px;
+  top: 8px;
+}
+
+.close {
+  display: flex;
+  margin: auto;
 }
