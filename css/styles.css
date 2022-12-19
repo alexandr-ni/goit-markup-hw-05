@@ -146,7 +146,7 @@ a {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  width: 72px;
+  width: -webkit-min-content;
   padding: 32px 0;
   transition-property: color, fill;
   transition-duration: 250ms;
@@ -182,14 +182,10 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
   color: var(--color-white);
 }
 
-/* Main */
-
 .current {
   color: var(--color-blue);
   position: relative;
   transition-property: after;
-  transition-duration: 2s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current::after {
@@ -199,10 +195,11 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
   width: 100%;
   height: 4px;
   content: "";
-  margin-top: auto;
   position: absolute;
-  bottom: 0;
+  transform: translateY(29px);
 }
+
+/* Main */
 
 .section-pageone {
   width: 1600px;
@@ -318,10 +315,16 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
   margin: 0 0 50px;
 }
 
+.what-we-do-list {
+  position: relative;
+}
+
 .what-we-do-box {
   background: rgba(47, 48, 58, 0.8);
-  position: relative;
-  bottom: 70px;
+  position: absolute;
+  max-width: 370px;
+  width: 100%;
+  bottom: 0;
 }
 
 .what-we-do-sentence {
@@ -386,9 +389,6 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
 .client-list {
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 5px;
-  fill: var(--color-social-icon);
 }
 
 .client-icon {
@@ -397,8 +397,9 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
   justify-content: center;
   width: 100%;
   height: 100%;
-  fill: inherit;
-  transition-property: background;
+  border: 1px solid #afb1b8;
+  border-radius: 5px;
+  fill: var(--color-social-icon);
   transition-property: border, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -406,8 +407,7 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
 
 .client-icon:hover,
 .client-icon:focus {
-  border-radius: 5px;
-  border: 1px solid #2196f3;
+  border: 1px solid var(--color-blue);
   fill: var(--color-blue);
 }
 
@@ -634,6 +634,8 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -668,6 +670,7 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
   height: 30px;
   right: 8px;
   top: 8px;
+  cursor: pointer;
 }
 
 .close {
