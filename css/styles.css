@@ -400,14 +400,14 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
   border: 1px solid #afb1b8;
   border-radius: 5px;
   fill: var(--color-social-icon);
-  transition-property: border, fill;
+  transition-property: border-color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon:hover,
 .client-icon:focus {
-  border: 1px solid var(--color-blue);
+  border-color: var(--color-blue);
   fill: var(--color-blue);
 }
 
@@ -485,7 +485,6 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
 
 .link-in-pagetwo {
   display: block;
-  border: 1px solid #eeeeee;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -524,6 +523,15 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
 .page-footer {
   background-color: var(--color-darkblue);
   padding: 60px 0;
+}
+
+.container-in-footer {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  align-items: baseline;
+  display: flex;
+  gap: 70px;
 }
 
 .address-box {
@@ -608,11 +616,6 @@ a[href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"]
 .socials-link-our-team:focus {
   background: var(--color-blue);
   fill: var(--color-white);
-}
-
-.box-in-footer {
-  display: flex;
-  gap: 70px;
 }
 
 .p-in-pagefooter {
